@@ -1,7 +1,7 @@
 
 // Usage in your code
 interface Category {
-  id: string;
+  id?: string;
   name: string;
   imageURL: string;
 }
@@ -25,7 +25,7 @@ export interface IFormInput {
 }
 
 export interface ICategory {
-  id: string;
+  id?: string;
   name: string;
   imageURL: string;
 }

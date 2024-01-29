@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ProductList from "./components/ProductList";
 import { categories, colors, formInputsList, productList } from "./data/dummy";
-import { IProduct } from "./interfaces";
+import { IProduct,ICategory } from "./interfaces";
 import Button from "./components/ui/Button";
 import Modal from "./components/ui/Modal";
 import Input from "./components/ui/Input";
@@ -11,7 +11,6 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { v4 as uuidv4 } from "uuid";
 import ErrorMessage from "./components/errorMsg";
-// import toast from "react-hot-toast";
 import Swal from "sweetalert2";
 import toast from "react-hot-toast";
 const productSchema = Yup.object().shape({
@@ -46,7 +45,7 @@ export default function App() {
   const [Products, setProducts] = useState<IProduct[]>(productList);
   let [isOpen, setIsOpen] = useState(false);
   const [tempColors, setTempColor] = useState<string[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+  const [selectedCategory, setSelectedCategory] = useState<ICategory>(categories[0]);
   const [editProductId, setEditProductId] = useState<string |undefined>("");
 
  
