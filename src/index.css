@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+  .btn{
+      @apply py-3 px-6 bg-secondary text-white rounded-xl w-full hover:text-secondary hover:bg-white transition-all hover:shadow-[rgba(90,_80,_204,_0.5)_0px_3px_8px]
+  }
+  .btn-danger{
+      @apply py-3 px-6 bg-red-700 text-white rounded-xl w-full hover:text-red-700 hover:bg-white transition-all hover:shadow-[rgba(0,_0,_0,_0.5)_0px_3px_8px]
+  }
+}
